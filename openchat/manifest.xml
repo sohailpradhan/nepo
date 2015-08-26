@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+    <name>COM_OPENCHAT</name>
+    <author>Sohail</author>
+    <copyright>(C) 2005 - 2014 Open Source Matters. All rights reserved.</copyright>
+    <creationDate>August 2015</creationDate>
+    <license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
+    <authorEmail>adminsp@joomla.org</authorEmail>
+    <authorUrl>www.joomla.org</authorUrl>
+    <version>1.0.0</version>
+    <description>COM_OPENCHAT_DESCRIPTION</description>
+    
+    <media destination="com_hello" folder="media">
+        <folder>images</folder>
+        <folder>css</folder>
+        <folder>js</folder>
+        <filename>index.html</filename>
+    </media>
+    <install>
+        <sql>
+            <file charset="utf8" driver="mysql">sql/install.sql</file>
+        </sql>
+    </install>
+    <update>
+        <sql>
+            <file charset="utf8" driver="mysql">sql/update.sql</file>
+        </sql>
+    </update>
+    <uninstall>
+        <sql>
+            <file charset="utf8" driver="mysql">sql/uninstall.sql</file>
+        </sql>
+    </uninstall>
+    <administration>
+        <files folder="admin">
+            <filename>hello.php</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>config.xml</filename>
+            <filename>access.xml</filename>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <folder>sql</folder>
+        </files>
+                
+        <sql>
+            <file charset="utf8" driver="mysql">sql/install.sql</file>
+        </sql>
+        <languages folder="language/en-GB">
+            <language tag="en-GB">en-GB.com_hello.ini</language>
+            <language tag="en-GB">en-GB.com_hello.sys.ini</language>
+        </languages>
+        <menu link="option=com_hello" img="../media/com_hello/images/car.jpg">Hello</menu>
+    </administration>
+</extension>
